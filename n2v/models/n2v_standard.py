@@ -9,7 +9,9 @@ from csbdeep.utils.six import Path, FileNotFoundError
 from csbdeep.data import PadAndCropResizer
 
 from keras.callbacks import TerminateOnNaN
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 from keras import backend as K
 from ruamel.yaml import YAML
 import json
